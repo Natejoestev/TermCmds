@@ -64,7 +64,8 @@ run `PyTermCmds-compile` in terminal for help
 so you can now call `command *args **kwargs *options`
 you can use `-o DIR` or `-output DIR` kwarg for moving the output dir.  
 example:
-```current dir\
+```
+current dir\
  - cmd.py
 ```
 run `PyTermCmds-compile cmd.py compiled/cmd.py`
