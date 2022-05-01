@@ -54,3 +54,18 @@ subcommand
 `args` is a list of values that are not kwargs or options  
 `kwargs` is a dictionary of keys and values `-key value`  
 `options` is a list of options `--option`  
+
+## compile
+
+TermCmds installs a terminal command called `PyTermCmds-compile`  
+run `PyTermCmds-compile` in terminal for help  
+  
+`PyTermCmds-compile command.py` will make a batch file in the current dir called `command.bat` linking to the script;  
+so you can now call `command *args **kwargs *options`
+you can use `-o DIR` or `-output DIR` kwarg for moving the output dir.  
+example:
+```current dir\
+ - cmd.py
+```
+run `PyTermCmds-compile cmd.py compiled/cmd.py`
+and now you should have a dir called `compiled` with `cmd.py` and `cmd.bat` in it
