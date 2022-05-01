@@ -42,8 +42,11 @@ def main(args, kwargs, options):
         return
     f = kwargs.get("o") or kwargs.get("output")
     output = os.path.abspath(f) if f else os.path.abspath(file)
+    odir = os.path.split(output)[0]
     batd = os.path.splitext(output)[0] + ".bat"
 
+    if not os.path.exists(odir):
+        os.mkdir(odir)
     try:
         shutil.copy(file, output)
     except shutil.SameFileError:

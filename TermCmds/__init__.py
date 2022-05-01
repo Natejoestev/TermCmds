@@ -37,7 +37,7 @@ class Command:
                     self.arg_error(
                         errorTypes.key_no_value+f"\nArgument #{i+1} doesn't have a value"
                     )
-                valid_kwargs[arg] = args.pop(i+1)
+                valid_kwargs[arg[1:]] = args.pop(i+1)
             else:
                 valid_args.append(arg)
             i += 1
